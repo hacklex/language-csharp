@@ -227,8 +227,8 @@ repository:
     ]
     end: "\\)"
   "razor-code-block":
-    begin: "@?\\{"
-    captures:
+    begin: "@\\{"
+    beginCaptures:
       "0":
         name: "keyword.control.cshtml"
     patterns: [
@@ -240,6 +240,9 @@ repository:
       }
     ]
     end: "\\}"
+    endCaptures:
+      "0":
+        name: "keyword.control.cshtml"
   "csharp-namespace-identifier":
     patterns: [
       {
