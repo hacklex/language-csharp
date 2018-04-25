@@ -82,11 +82,16 @@ repository:
     end: "\\)"
   "implicit-razor-expression":
     name: "meta.expression.implicit.cshtml"
-    begin: "(@)([a-zA-Z0-9\\.\\_\\(\\)]+)"
+    begin: "(@)"
     captures:
       "0":
         name: "keyword.control.cshtml"
-    end: "$"
+    patterns: [
+      {
+        include: "#csharp-expression"
+      }
+    ]
+    end: "\\b"
   "using-directive":
     name: "meta.directive.using.cshtml"
     begin: "(@using)\\s+"
