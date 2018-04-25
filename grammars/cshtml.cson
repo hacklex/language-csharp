@@ -236,7 +236,7 @@ repository:
         include: "text.html.cshtml"
       }
       {
-        include: "source.cs"
+        include: "#csharp-statement"
       }
     ]
     end: "\\}"
