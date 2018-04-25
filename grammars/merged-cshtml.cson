@@ -226,20 +226,6 @@ repository:
       }
     ]
     end: "\\)"
-  "razor-code-block":
-    begin: "@\\{"
-    beginCaptures:
-      "0":
-        name: "punctuation.curlybrace.open.cs"
-    end: "\\}"
-    endCaptures:
-      "0":
-        name: "punctuation.curlybrace.close.cs"
-    patterns: [
-      {
-        include: "#statement"
-      }
-    ]
   "csharp-namespace-identifier":
     patterns: [
       {
