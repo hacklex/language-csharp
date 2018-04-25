@@ -88,7 +88,7 @@ repository:
         name: "keyword.control.cshtml"
     patterns: [
       {
-        include: "#csharp-expression"
+        include: "#expression"
       }
     ]
     end: "\\b"
@@ -227,7 +227,7 @@ repository:
     ]
     end: "\\)"
   "razor-code-block":
-    begin: "@@\\{"
+    begin: "@\\{"
     beginCaptures:
       "0":
         name: "keyword.control.cshtml"
@@ -236,7 +236,7 @@ repository:
         include: "text.html.cshtml"
       }
       {
-        include: "#csharp-statement"
+        include: "#statement"
       }
     ]
     end: "\\}"
