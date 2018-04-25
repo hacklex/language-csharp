@@ -227,7 +227,7 @@ repository:
     ]
     end: "\\)"
   "razor-code-block":
-    begin: "@\\{"
+    begin: "@@\\{"
     beginCaptures:
       "0":
         name: "keyword.control.cshtml"
