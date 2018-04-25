@@ -227,22 +227,16 @@ repository:
     ]
     end: "\\)"
   "razor-code-block":
-    begin: "@\\{"
+    begin: "(@)"
     beginCaptures:
       "0":
         name: "keyword.control.cshtml"
     patterns: [
       {
-        include: "text.html.cshtml"
-      }
-      {
-        include: "#statement"
+        include: "#block"
       }
     ]
-    end: "\\}"
-    endCaptures:
-      "0":
-        name: "keyword.control.cshtml"
+    end: "\\b"
   "csharp-namespace-identifier":
     patterns: [
       {
