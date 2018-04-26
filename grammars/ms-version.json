@@ -33,10 +33,10 @@
           },
           "patterns": [
             {
-              "include": "#embedded-code"
+              "include": "#embeddedcode"
             },
             {
-              "include": "#general-includes"
+              "include": "#generalincludes"
             },
             {
               "include": "source.cs"
@@ -50,10 +50,10 @@
           }
         },
         {
-          "include": "#embedded-code"
+          "include": "#embeddedcode"
         },
         {
-          "include": "#general-includes"
+          "include": "#generalincludes"
         },
         {
           "include": "source.cs"
@@ -90,10 +90,10 @@
           }
         },
         {
-          "include": "#embedded-code"
+          "include": "#embeddedcode"
         },
         {
-          "include": "#general-includes"
+          "include": "#generalincludes"
         }
       ],
       "end": "(\\n|\\s)",
@@ -108,10 +108,10 @@
       },
       "patterns": [
         {
-          "include": "#embedded-code"
+          "include": "#embeddedcode"
         },
         {
-          "include": "#general-includes"
+          "include": "#generalincludes"
         },
         {
           "include": "source.cs"
@@ -128,7 +128,7 @@
     }
   ],
   "repository": {
-    "embedded-code": {
+    "embeddedcode": {
       "match": "(@?[a-zA-Z0-9]+)(\\.([a-zA-Z0-9]+))?",
       "captures": {
         "1": {
@@ -140,7 +140,7 @@
       },
       "patterns": [
         {
-          "include": "#general-includes"
+          "include": "#generalincludes"
         }
       ]
     },
@@ -154,22 +154,22 @@
       "end": "\\*@",
       "name": "comment.block.cshtml"
     },
-    "line-comments": {
+    "linecomments": {
       "name": "comment.line.double-slash.cshtml",
       "begin": "(\\s*)//",
       "end": "$(\\s*)"
     },
-    "block-comments": {
+    "blockcomments": {
       "name": "comment.block.cshtml",
       "begin": "/\\*",
       "end": "((?=})|(\\*/))"
     },
-    "single-quotes": {
+    "singlequotes": {
       "name": "string.quoted.single.cshtml",
       "begin": "'",
       "end": "'"
     },
-    "double-quotes": {
+    "doublequotes": {
       "name": "string.quoted.double.cshtml",
       "begin": "\"",
       "end": "\"",
@@ -179,38 +179,38 @@
         }
       ]
     },
-    "round-brackets": {
+    "roundbrackets": {
       "name": "string.bracers.round.cshtml",
       "begin": "\\(",
       "end": "\\)"
     },
-    "squiggly-brackets": {
+    "squigglybrackets": {
       "name": "string.bracers.squiggly.cshtml",
       "begin": "{",
       "end": "}"
     },
-    "general-includes": {
+    "generalincludes": {
       "patterns": [
         {
           "include": "#comments"
         },
         {
-          "include": "#line-comments"
+          "include": "#linecomments"
         },
         {
-          "include": "#block-comments"
+          "include": "#blockcomments"
         },
         {
-          "include": "#round-brackets"
+          "include": "#roundbrackets"
         },
         {
-          "include": "#squiggly-brackets"
+          "include": "#squigglybrackets"
         },
         {
-          "include": "#single-quotes"
+          "include": "#singlequotes"
         },
         {
-          "include": "#double-quotes"
+          "include": "#doublequotes"
         },
         {
           "include": "text.html.basic"
