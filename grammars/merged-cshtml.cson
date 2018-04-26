@@ -230,17 +230,17 @@ repository:
     begin: "@\\{"
     beginCaptures:
       "0":
-        name: "punctuation.curlybrace.open.cs"
+        name: "keyword.control.cshtml"
     end: "\\}"
     endCaptures:
       "0":
-        name: "punctuation.curlybrace.close.cs"
+        name: "keyword.control.cshtml"
     patterns: [
       {
-        include: "#statement"
+        include: "text.html.basic"
       }
       {
-        include: "text.html.basic"
+        include: "#statement"
       }
     ]
   "csharp-namespace-identifier":
