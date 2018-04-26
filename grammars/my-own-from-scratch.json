@@ -1,6 +1,13 @@
 {
   "patterns": [
     { "include": "#tag" }
+    {      
+      "begin": "\\@",
+      "patterns": [
+        {"include": "source.cs"}
+      ],
+      "end": "\\b"
+    }
   ]
   "repository": {
     "attribute-value": {
