@@ -239,6 +239,9 @@ repository:
       {
         include: "#statement"
       }
+      {
+        include: "text.html.cshtml"
+      }
     ]
   "csharp-namespace-identifier":
     patterns: [
