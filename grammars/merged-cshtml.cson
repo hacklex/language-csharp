@@ -240,7 +240,7 @@ repository:
         include: "#statement"
       }
       {
-        include: "text.html.cshtml"
+        include: "text.html.basic"
       }
     ]
   "csharp-namespace-identifier":
