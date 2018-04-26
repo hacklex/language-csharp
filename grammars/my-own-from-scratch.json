@@ -1,0 +1,32 @@
+{
+  "patterns": [
+    { "include": "#tag" }
+  ]
+  "repository": {
+    "attribute-value": {
+      "begin": "\"",
+      "end": "\"",
+      "patterns" : [
+        { "match": "[^\"@]" },
+        { "include": "#razor-insertion" }
+      ]
+    }
+    "tag": {
+      "begin": "\\<([a-zA-Z_][a-zA-Z_0-9]*)\\>",
+      "beginCaptures": {"0": {"name": "tag.name"}},
+      "end": ""\\<\\/([a-zA-Z_][a-zA-Z_0-9]*)\\>"
+      "endCaptures": {"0": {"name": "tag.name"}},
+      "patterns": [
+        {"include" : "#tag"},
+        {"match": "a-zA-Z_0-9\s"}
+      ]
+    }
+    "razor-insertion" : {
+      "begin": "\\@",
+      "end": "\\b",
+      "patterns": [
+        {"include": "source.cs"}       
+      ]
+    }
+  }
+}
